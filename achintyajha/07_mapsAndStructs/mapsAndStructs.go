@@ -29,18 +29,24 @@ func main() {
 	population, ok := statePopulation["Florida"]
 	fmt.Println(population, ok) // ok prints false
 
-	// Maps change values when passes to other variables or funcs
+	// Maps change values when passed to other variables or funcs
 
 	// structs, only collection where elements can have different data types
 
 	aDoctor := Doctor{
-		number:    3, //not necessary to use number: in syntax, but it is good for readability. Also, it is positional so not writing name can cause problems
+		number:    3, //not necessary to use 'number:' in syntax, but it is good for readability. Also, it is positional so not writing name can cause problems
 		actorName: "Jon Pertwee",
 		companions: []string{
 			"Liz Shaw",
 			"Jo Grant",
 		},
 	}
+
+	// Anonymous struct, use in short-lived cases
+	anotherDoctor := struct{ name string }{name: "Jon Pertwee"}
+	fmt.Println(anotherDoctor)
+
+	// Structs don't change values when passed to other variables or funcs, make copies
 
 	fmt.Println(aDoctor)
 	fmt.Println(aDoctor.companions[1])
