@@ -31,3 +31,8 @@ func main() {
 		fmt.Println("Greater than 20")
 	}
 }
+
+// most languages have implicit fallthrough and explicit break
+// go has implicit break and explicit fallthrough
+
+// we can break out earlier as well with the break statement
